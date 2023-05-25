@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:wght@300;400;700;900&display=swap');
+
+:root {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #296ca8;
+	font-family: 'Playfair', serif;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+h1 {
+	border: 2px solid blue;
+	width: 100%;
+	text-align: center;
+}
+#main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	width: 90vw;
+}
+form {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+input {
+	display: block;
+	width: 100%;
+}
+.post {
+	background-color: #4992d3;
+	position: relative;
+	border-radius: 3px;
+	padding: 20px;
+	margin: 40px 0;
+}
+h2 {
+	font-weight: 900;
+}
+.postNum {
+	background: #fff;
+	position: absolute;
+	top: -55px;
+	left: -15px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	color: #296ca8;
+	font-size: 40px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.dot {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background-color: #4b9cdb;
+}
+@keyframes jumpingAnimation {
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+	50% {
+		transform: translate3d(0, 15px, 0);
+	}
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
+}
+.container .dot:nth-last-child(1) {
+	animation: jumpingAnimation 0.6s 0.1s ease-in infinite;
+}
+.container .dot:nth-last-child(2) {
+	animation: jumpingAnimation 0.6s 0.2s ease-in infinite;
+}
+.container .dot:nth-last-child(3) {
+	animation: jumpingAnimation 0.6s 0.3s ease-in infinite;
+}
